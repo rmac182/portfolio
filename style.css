@@ -1,44 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,700');
 * {
-  margin:0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   font-size: 25px;
+  font-family: dosis, Arial, Helvetica, sans-serif;
 }
 
+a {
+  text-decoration-line: none;
+}
 
-#welcome-section{
-  background: linear-gradient(rgba(41, 93, 236, 0.637), rgb(144, 165, 224));
+#navbar {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  justify-items: right;
+  align-items: center;
+  
+  background: #c78e34;
+  border: 2px inset #444;
+  width: 100%;
+  height: 100px;
+}
+
+#navbar a {
+  padding: 15px;
+  color: #333;
+}
+
+#project-link {
+  grid-column: 2;
+}
+
+#contact-link {
+  grid-column: 3;
+}
+
+#welcome-section {
+  background: linear-gradient(#90a5e0, #ccc);
   height: 100vh;
+  color: #333;
   text-align: center;
   padding-top: 50vh;
 }
-  
+
+.lightweight {
+  font-weight: 300;
+}
 
 #projects {
   display: grid;
+  grid-template-rows: .5fr .5fr;
   grid-template-columns: repeat(3, 1fr);
-  background: linear-gradient(rgb(144, 165, 224), rgb(213, 220, 241));
-  
+  padding: 4em 2em;
+  grid-gap: 2em;
+  align-content: space-around;
+  background: #ccc;
 }
-  
-  
+
+#project-intro {
+  grid-row: 1;
+  grid-column: 1 / span 3;
+  text-align: center;
+  justify-self: center;
+  color: #333;
+}
+
+#contact {
+  height: 70vh;
+  text-align: center;
+}
+
 .project-tile {
-  text-decoration-line: none;
-  font-size: 130%;
+  font-size: 140%;
+  font-weight: 300;
+  padding: .5rem;
+  grid-row: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgba(41, 93, 236, 0.837);
-}  
+  color: rgb(34, 34, 34);
+  background: #90a5e045;
+  box-shadow: rgba(95, 95, 95, 0.452) 4px 4px 5px 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all .4s;
+}
+
+.project-tile:hover {
+  color: #c78e34;
+}
 
 .project-tile img {
-  height: 6em;
+  height: 4em;
   width: 8em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-  
-  
-  
+
+#profile-link img{
+  height: 100px;
+  width: 100px;
+}
